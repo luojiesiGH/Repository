@@ -22,8 +22,9 @@ __mtime__ = '3/14/2018'
 import time
 from openpyxl import Workbook
 
+
 class XlsOutputer():
-    def __init__(self,InfoQueue):
+    def __init__(self, InfoQueue):
         self.queue = InfoQueue
         self.wb = Workbook()
 
@@ -36,7 +37,7 @@ class XlsOutputer():
             count = count + 1
             if count == 3:
                 print("output ending")
-                break;
+                break
             try:
                 while not self.queue.empty():
                     count = 0
